@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
     config.vm.box = base_box
     config.vm.box_url = base_box_url
 
-    # for best results at "10.10.10.10 app.local"
+    # for best results add "10.10.10.10 app.local"
     # or something like it to your hosts file
     config.vm.network :hostonly, "10.10.10.10"
 
