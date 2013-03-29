@@ -20,6 +20,8 @@ This repo is very much a work in progress. Issues and pull-requests are encourag
 
 These instructions are merely one way to use these tools. I'm presenting them because I feel that they're both reasonable and simple.
 
+These are instructions for creating a development environment utilizing Vagrant for virtual-machine management and Chef for installing and configuring software.
+
 ### Installation is two-part. First, install the applications.
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your OS.
@@ -32,25 +34,33 @@ These instructions are merely one way to use these tools. I'm presenting them be
 
 - Add this repository to yours.
 
+```bash
     $ cd mysiterepo
 
     $ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
+```
 
 - Copy an example Vagrantfile
 
+'''bash
     $ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
+'''
 
 - Read the Vagrant file and uncomment / modify where appropriate
 
 - (optional) Add this entry to hosts file
 
+'''
     10.10.10.10 app.local
+'''
 
 # Working on the Application
 
 ### Start the Application
 
+'''bash
     $ vagrant up
+'''
 
 Wait until Vagrant / Chef are done, then in your browser http://app.local/ or http://10.10.10.10
 
@@ -58,24 +68,36 @@ Wait until Vagrant / Chef are done, then in your browser http://app.local/ or ht
 
 You have the choice of either... Supending the application (takes a small bit more disk space). **Recommended**
 
+'''bash
     $ vagrant suspend
+'''
 
 or.. you can halt the box (saves like 200meg?) but requires you to start it all up again. (You don't have to rebuild the VM)
 
+'''bash
     $ vagrant halt
+'''
 
 ### Make Changes to the Environment
 
 If configurations change you can simply run:
 
+'''bash
     $ vagrant reload
+'''
 
 It will then apply your changes to the Vagrantfile or cookbooks.
 
 ### Running Unit-Tests
 
+''' bash
     $ vagrant ssh
-    $
+
+    $ cd /vagrant
+
+    $ phpunit
+'''
+
 # Sources
 
 Add list of people whose work I've stolen.
