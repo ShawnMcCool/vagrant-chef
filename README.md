@@ -22,6 +22,8 @@ These instructions are merely one way to use these tools. I'm presenting them be
 
 These are instructions for creating a development environment utilizing Vagrant for virtual-machine management and Chef for installing and configuring software.
 
+You would install this individually into each site repo. When working on a site, you'd bring up the server. When you're done, you suspend it. I repeat. Each individual site repo has its own virtual-machine that is brought up when you're working on that specific site, and then suspended when you're done.
+
 ### Installation is two-part. First, install the applications.
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your OS.
