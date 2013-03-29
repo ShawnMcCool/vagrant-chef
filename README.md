@@ -9,20 +9,19 @@ Currently contained within are:
     - an example Vagrantfile with notes
     - all of the Chef cookbooks that you need to run a bunch of PHP stuff
 
-# Instructions
+# Installation
 
 These instructions are merely one way to use these tools. I'm presenting them because I feel that they're both reasonable and simple.
 
-- Install Ruby / VirtualBox
+Installation is two-part. First, install the applications.
 
-Install Ruby for your OS. This is probably only needed if your run Windows. If so, use [Ruby Installer](http://rubyinstaller.org/).
+- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your OS.
 
-[Install VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your OS.
+- [install Vagrant](http://downloads.vagrantup.com/)
 
-- Install Vagrant / Chef
+- [Install Chef Client](http://www.opscode.com/chef/install/)
 
-    $ gem install vagrant
-    $ gem install chef
+Then, set up your site repository.
 
 - Add this repository to yours.
 
@@ -35,12 +34,37 @@ Install Ruby for your OS. This is probably only needed if your run Windows. If s
 
 - Read the Vagrant file and uncomment / modify where appropriate
 
-- Start up Vagrant
-
-    $ vagrant up
-
 - (optional) Add this entry to hosts file
 
     10.10.10.10 app.local
 
-- Wait until Vagrant / Chef are done, then in your browser http://app.local/
+# Running the Application
+
+- Start up Vagrant
+
+    $ vagrant up
+
+- Wait until Vagrant / Chef are done, then in your browser http://app.local/ or http://10.10.10.10
+
+# Stopping the Application
+
+You have the choice of either... Supending the application (takes a small bit more disk space). **Recommended**
+
+    $ vagrant suspend
+
+or.. you can halt the box (saves like 200meg?) but requires you to start it all up again. (You don't have to rebuild the VM)
+
+    $ vagrant halt
+
+# Making changes to the configuration
+
+If configurations change you can simply run:
+
+    $ vagrant reload
+
+It will then apply your changes to the Vagrantfile or cookbooks.
+
+
+# Sources
+
+Add list of people whose work I've stolen.
