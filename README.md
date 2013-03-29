@@ -33,6 +33,7 @@ These instructions are merely one way to use these tools. I'm presenting them be
 - Add this repository to yours.
 
     $ cd mysiterepo
+
     $ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
 
 - Copy an example Vagrantfile
