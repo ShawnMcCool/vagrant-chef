@@ -101,6 +101,13 @@ It will then apply your changes to the Vagrantfile or cookbooks.
 
     $ phpunit
 
+### How you can help!
+
+I've made many annotations of issues in the Vagrantfile example, each could use a solution.
+
+Trying to install this on your system and reporting back any issues that you've had with instructions listed would be a huge help.
+
+Know a bit about Vagrant / Chef and want to complain that something could be done better? Please open an issue!
 
 # Sources
 
