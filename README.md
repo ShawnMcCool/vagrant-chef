@@ -24,9 +24,11 @@ These are instructions for creating a development environment utilizing Vagrant 
 
 You would install this individually into each site repo. When working on a site, you'd bring up the server. When you're done, you suspend it. I repeat. Each individual site repo has its own virtual-machine that is brought up when you're working on that specific site, and then suspended when you're done.
 
+This should work on any Windows, OSX, or Linux box.
+
 ### Installation is two-part. First, install the applications.
 
-- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your OS.
+- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 - [install Vagrant](http://downloads.vagrantup.com/)
 
