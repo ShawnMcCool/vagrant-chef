@@ -4,16 +4,23 @@ Everything that one needs to create development environments with Vagrant and Ch
 
 This repo is very much a work in progress. Issues and pull-requests are encouraged.
 
+### Features Include
 
-Currently contained within are:
-    - an example Vagrantfile with notes
-    - all of the Chef cookbooks that you need to run a bunch of PHP stuff
+- [XDebug](http://xdebug.org/) - PHP Debugging extension
+- [WebGrind](https://github.com/jokkedk/webgrind) - Profiling tool
+- [MailCatcher](http://mailcatcher.me/) - Easy local mail testing
+- Git
+- Subversion
+- LAMP (including PHP 5.4)
+- Sqlite
+- Composer
+- Curl, TMUX, screen
 
 # Installation
 
 These instructions are merely one way to use these tools. I'm presenting them because I feel that they're both reasonable and simple.
 
-Installation is two-part. First, install the applications.
+### Installation is two-part. First, install the applications.
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads) for your OS.
 
@@ -21,7 +28,7 @@ Installation is two-part. First, install the applications.
 
 - [Install Chef Client](http://www.opscode.com/chef/install/)
 
-Then, set up your site repository.
+### Then, set up your site repository.
 
 - Add this repository to yours.
 
@@ -38,15 +45,15 @@ Then, set up your site repository.
 
     10.10.10.10 app.local
 
-# Running the Application
+# Working on the Application
 
-- Start up Vagrant
+### Start the Application
 
     $ vagrant up
 
-- Wait until Vagrant / Chef are done, then in your browser http://app.local/ or http://10.10.10.10
+Wait until Vagrant / Chef are done, then in your browser http://app.local/ or http://10.10.10.10
 
-# Stopping the Application
+### Stop the Application
 
 You have the choice of either... Supending the application (takes a small bit more disk space). **Recommended**
 
@@ -56,7 +63,7 @@ or.. you can halt the box (saves like 200meg?) but requires you to start it all 
 
     $ vagrant halt
 
-# Making changes to the configuration
+### Make Changes to the Environment
 
 If configurations change you can simply run:
 
@@ -64,7 +71,10 @@ If configurations change you can simply run:
 
 It will then apply your changes to the Vagrantfile or cookbooks.
 
+### Running Unit-Tests
 
+    $ vagrant ssh
+    $
 # Sources
 
 Add list of people whose work I've stolen.
