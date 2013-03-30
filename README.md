@@ -2,7 +2,7 @@ Vagrant / Chef Configurations
 ============
 Everything that one needs to create development environments with Vagrant and Chef.
 
-This repo is very much a work in progress. Issues and pull-requests are encouraged.
+This repo is very much a work in progress. There are many things that can be improved. Annotations were made in comment form within the example Vagrantfile, regarding room for improvement. Issues and pull-requests are encouraged.
 
 ### Features Include
 
@@ -111,4 +111,4 @@ Know a bit about Vagrant / Chef and want to complain that something could be don
 
 # Sources
 
-Add list of people whose work I've stolen.
+Much configuration was taken directly from https://github.com/r8/vagrant-lamp.
