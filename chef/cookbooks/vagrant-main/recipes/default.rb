@@ -86,18 +86,18 @@ package "php5-mcrypt" do
 end
 
 # Install php-xdebug
-package "php5-xdebug" do
-  action :install
-end
+# package "php5-xdebug" do
+#   action :install
+# end
 
-template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
-  source "xdebug.ini.erb"
-  owner "root"
-  group "root"
-  mode "0644"
-  action :create
-  notifies :restart, resources("service[apache2]"), :delayed
-end
+# template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
+#   source "xdebug.ini.erb"
+#   owner "root"
+#   group "root"
+#   mode "0644"
+#   action :create
+#   notifies :restart, resources("service[apache2]"), :delayed
+# end
 
 # Get eth1 ip
 eth1_ip = node[:network][:interfaces][:eth1][:addresses].select{|key,val| val[:family] == 'inet'}.flatten[0]
