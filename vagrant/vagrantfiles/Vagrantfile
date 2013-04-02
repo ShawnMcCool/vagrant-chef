@@ -34,7 +34,9 @@ Vagrant::Config.run do |config|
                 "server_debian_password" => "password",
                 "server_repl_password" => "password",
             },
+            "sites" => ["default"]
             # you can add databases to a list here
+	    # You'll also need to add a trailing comma above
 #            "database" => {
 #                "create" => ["example_db_name"]
 #            }
