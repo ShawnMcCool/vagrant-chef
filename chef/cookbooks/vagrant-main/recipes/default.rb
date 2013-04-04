@@ -56,12 +56,31 @@ apache_site "default" do
   enable false
 end
 
+# Install phpMyAdmin
+git "/var/www/phpmyadmin" do
+  repository 'git://github.com/phpmyadmin/phpmyadmin.git'
+  reference "STABLE"
+  action :sync
+end
+
+# Configure phpMyAdmin
+template "#{node[:apache][:dir]}/conf.d/phpmyadmin.conf" do
+  source "phpmyadmin.conf.erb"
+  owner "root"
+  group "root"
+  mode 0644
+  action :create
+  notifies :restart, resources("service[apache2]"), :delayed
+end
+
 # Install Webgrind
 git "/var/www/webgrind" do
   repository 'git://github.com/jokkedk/webgrind.git'
   reference "master"
   action :sync
 end
+
+# Configure Webgrind
 template "#{node[:apache][:dir]}/conf.d/webgrind.conf" do
   source "webgrind.conf.erb"
   owner "root"
