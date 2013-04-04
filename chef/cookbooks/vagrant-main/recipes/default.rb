@@ -71,29 +71,22 @@ template "#{node[:apache][:dir]}/conf.d/webgrind.conf" do
   notifies :restart, resources("service[apache2]"), :delayed
 end
 
-# Install php-curl
-package "php5-curl" do
-  action :install
+# Install PHP extensions
+["php5-curl", "php5-mcrypt", "php5-xdebug"].each do | ext |
+  package ext do
+    action :install
+  end
 end
 
-# Install php-mcrypt
-package "php5-mcrypt" do
-  action :install
+# Configure xdebug
+template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
+  source "xdebug.ini.erb"
+  owner "root"
+  group "root"
+  mode "0644"
+  action :create
+  notifies :restart, resources("service[apache2]"), :delayed
 end
-
-# Install php-xdebug
-# package "php5-xdebug" do
-#   action :install
-# end
-
-# template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
-#   source "xdebug.ini.erb"
-#   owner "root"
-#   group "root"
-#   mode "0644"
-#   action :create
-#   notifies :restart, resources("service[apache2]"), :delayed
-# end
 
 # Get eth1 ip
 eth1_ip = node[:network][:interfaces][:eth1][:addresses].select{|key,val| val[:family] == 'inet'}.flatten[0]
