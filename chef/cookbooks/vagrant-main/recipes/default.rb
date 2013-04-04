@@ -35,7 +35,7 @@ sites = node["sites"] ||= []
 sites.each do |name|
   site = data_bag_item("sites", name)
 
-  puts "installing site #{site["id"]}"
+  puts "Installing site #{site["id"]}"
 
   # Add site to apache config
   web_app site["host"] do
@@ -47,7 +47,8 @@ sites.each do |name|
 
   # Add site info in /etc/hosts
   bash "hosts" do
-   code "echo 127.0.0.1 #{site["host"]} #{site["aliases"].join(' ')} >> /etc/hosts"
+    aliases = site["aliases"].join(' ') if site["aliases"].kind_of?(Array)
+    code "echo 127.0.0.1 #{site["host"]} #{aliases} >> /etc/hosts"
   end
 end
 
@@ -62,6 +63,7 @@ git "/var/www/webgrind" do
   reference "master"
   action :sync
 end
+
 template "#{node[:apache][:dir]}/conf.d/webgrind.conf" do
   source "webgrind.conf.erb"
   owner "root"
