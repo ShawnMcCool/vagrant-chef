@@ -52,14 +52,6 @@ Vagrant::Config.run do |config|
 #    config.vm.provision :shell do |shell|
 #        shell.inline = "mysqldump -hhostname -uusername -ppassword databasename > dump.sql && mysql -uroot -ppassword example_db_name < dump.sql"
 #    end
-     # install Composer packages
-#    config.vm.provision :shell do |shell|
-#        shell.inline = "cd /vagrant && composer install"
-#    end
-     # update Composer packages
-#    config.vm.provision :shell do |shell|
-#        shell.inline = "cd /vagrant && composer update"
-#    end
     # run Laravel migration
 #    config.vm.provision :shell do |shell|
 #        shell.inline = "php /vagrant/artisan migrate --env=local"
