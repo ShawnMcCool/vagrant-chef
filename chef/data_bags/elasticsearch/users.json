@@ -1,0 +1,8 @@
+{
+  "id" : "users",
+  "_default" : {
+    "users" : [
+        { "username" : "username", "password" : "password" }
+    ]
+  }
+}
