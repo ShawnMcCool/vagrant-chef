@@ -101,6 +101,10 @@ It will then apply your changes to the Vagrantfile or cookbooks.
 
     $ phpunit
 
+### Troubleshooting
+
+There is a known Mac issue with VirtualBox crashing your VMs. [Here are more details and the solution.](https://www.virtualbox.org/ticket/11649)
+
 ### How you can help!
 
 I've made many annotations of issues in the Vagrantfile example, each could use a solution.
