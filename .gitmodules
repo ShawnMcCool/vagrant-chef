@@ -1,0 +1,39 @@
+[submodule "chef/cookbooks/apache2"]
+	path = chef/cookbooks/apache2
+	url = git@github.com:opscode-cookbooks/apache2.git
+[submodule "chef/cookbooks/apt"]
+	path = chef/cookbooks/apt
+	url = git@github.com:opscode-cookbooks/apt.git
+[submodule "chef/cookbooks/ark"]
+	path = chef/cookbooks/ark
+	url = git@github.com:opscode-cookbooks/ark.git
+[submodule "chef/cookbooks/aws"]
+	path = chef/cookbooks/aws
+	url = git@github.com:opscode-cookbooks/aws.git
+[submodule "chef/cookbooks/build-essentials"]
+	path = chef/cookbooks/build-essentials
+	url = git@github.com:opscode-cookbooks/build-essential.git
+[submodule "chef/cookbooks/database"]
+	path = chef/cookbooks/database
+	url = git@github.com:opscode-cookbooks/database.git
+[submodule "chef/cookbooks/dmg"]
+	path = chef/cookbooks/dmg
+	url = git@github.com:opscode-cookbooks/dmg.git
+[submodule "chef/cookbooks/git"]
+	path = chef/cookbooks/git
+	url = git@github.com:opscode-cookbooks/git.git
+[submodule "chef/cookbooks/java"]
+	path = chef/cookbooks/java
+	url = git@github.com:opscode-cookbooks/java.git
+[submodule "chef/cookbooks/mysql"]
+	path = chef/cookbooks/mysql
+	url = git@github.com:opscode-cookbooks/mysql.git
+[submodule "chef/cookbooks/openssl"]
+	path = chef/cookbooks/openssl
+	url = git@github.com:opscode-cookbooks/openssl.git
+[submodule "chef/cookbooks/php"]
+	path = chef/cookbooks/php
+	url = git@github.com:opscode-cookbooks/php.git
+[submodule "chef/cookbooks/users"]
+	path = chef/cookbooks/users
+	url = git@github.com:opscode-cookbooks/users.git
