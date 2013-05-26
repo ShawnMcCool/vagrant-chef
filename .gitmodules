@@ -34,3 +34,6 @@
 [submodule "chef/cookbooks/yum"]
 	path = chef/cookbooks/yum
 	url = git@github.com:opscode-cookbooks/yum.git
+[submodule "chef/cookbooks/build-essential"]
+	path = chef/cookbooks/build-essential
+	url = git@github.com:opscode-cookbooks/build-essential.git
