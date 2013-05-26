@@ -4,9 +4,6 @@
 [submodule "chef/cookbooks/apt"]
 	path = chef/cookbooks/apt
 	url = git@github.com:opscode-cookbooks/apt.git
-[submodule "chef/cookbooks/ark"]
-	path = chef/cookbooks/ark
-	url = git@github.com:opscode-cookbooks/ark.git
 [submodule "chef/cookbooks/aws"]
 	path = chef/cookbooks/aws
 	url = git@github.com:opscode-cookbooks/aws.git
