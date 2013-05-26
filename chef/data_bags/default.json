@@ -1,0 +1,9 @@
+{
+    "id": "default",
+    "host": "app.local",
+    "aliases": [
+        "app.dev",
+        "local.dev"
+    ],
+    "docroot": "/vagrant/public"
+}
