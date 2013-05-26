@@ -2,7 +2,6 @@
     "id": "legacy",
     "host": "app.local",
     "aliases": [
-        "app.local",
         "app.dev",
         "local.dev"
     ],
