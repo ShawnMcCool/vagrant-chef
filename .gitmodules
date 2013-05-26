@@ -7,9 +7,6 @@
 [submodule "chef/cookbooks/aws"]
 	path = chef/cookbooks/aws
 	url = git@github.com:opscode-cookbooks/aws.git
-[submodule "chef/cookbooks/build-essentials"]
-	path = chef/cookbooks/build-essentials
-	url = git@github.com:opscode-cookbooks/build-essential.git
 [submodule "chef/cookbooks/database"]
 	path = chef/cookbooks/database
 	url = git@github.com:opscode-cookbooks/database.git
@@ -34,3 +31,6 @@
 [submodule "chef/cookbooks/users"]
 	path = chef/cookbooks/users
 	url = git@github.com:opscode-cookbooks/users.git
+[submodule "chef/cookbooks/yum"]
+	path = chef/cookbooks/yum
+	url = git@github.com:opscode-cookbooks/yum.git
