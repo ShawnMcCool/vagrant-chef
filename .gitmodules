@@ -49,3 +49,6 @@
 [submodule "chef/cookbooks/elasticsearch"]
 	path = chef/cookbooks/elasticsearch
 	url = git@github.com:elasticsearch/cookbook-elasticsearch.git
+[submodule "chef/cookbooks/ark"]
+	path = chef/cookbooks/ark
+	url = git@github.com:opscode-cookbooks/ark.git
