@@ -40,3 +40,6 @@
 [submodule "chef/cookbooks/chef-php-extra"]
 	path = chef/cookbooks/chef-php-extra
 	url = git@github.com:inviqa/chef-php-extra.git
+[submodule "chef/cookbooks/composer"]
+	path = chef/cookbooks/composer
+	url = git@github.com:zircote/chef-composer.git
