@@ -48,6 +48,7 @@ Vagrant::Config.run do |config|
                 "server_root_password" => "password",
                 "server_debian_password" => "password",
                 "server_repl_password" => "password",
+                "bind_address" => "0.0.0.0"
             },
             # options for mysql-databases cookbook
             # will create these databases
