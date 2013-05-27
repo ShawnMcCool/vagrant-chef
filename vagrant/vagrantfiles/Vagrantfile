@@ -23,10 +23,22 @@ Vagrant::Config.run do |config|
         chef.cookbooks_path = "vagrant-chef/chef/cookbooks"
         chef.data_bags_path = "vagrant-chef/chef/data_bags"
 
-        # for now this mostly runs everything, this needs to be
-        # changed so that site-by-site configurations can be made
-        # on the Vagrantfile level, not from within cookbooks
-        chef.add_recipe "vagrant-main"
+        chef.add_recipe "apt"
+        chef.add_recipe "git"
+        chef.add_recipe "apache2"
+        chef.add_recipe "apache2::mod_rewrite"
+        chef.add_recipe "apache2::mod_ssl"
+        chef.add_recipe "mysql::server"
+        chef.add_recipe "php"
+        chef.add_recipe "php::module_mysql"
+        chef.add_recipe "php::module_apc"
+        chef.add_recipe "php::module_sqlite3"
+        chef.add_recipe "php::module_gd"
+        chef.add_recipe "chef-php-extra"
+        chef.add_recipe "apache2::mod_php5"
+        chef.add_recipe "database::mysql"
+        chef.add_recipe "apache-sites"
+        chef.add_recipe "mysql-databases"
 
         chef.json.merge!({
             "mysql" => {
@@ -34,28 +46,22 @@ Vagrant::Config.run do |config|
                 "server_debian_password" => "password",
                 "server_repl_password" => "password",
             },
+            # options for mysql-databases cookbook
+            # will create these databases
+            "databases" => {
+                "create" => ["db_name"]
+            },
+            # options for apache-sites cookbook
+            # options are default or legacy
+            # check out the data_bags folder to see details
             "sites" => ["default"]
-            # you can add databases to a list here
-	    # You'll also need to add a trailing comma above
-#            "database" => {
-#                "create" => ["example_db_name"]
-#            }
         })
 
     end
 end
 
-# this section represents laziness, fix with proper chef provisioning
 # uncomment a section and set it up as necessary
 Vagrant::Config.run do |config|
-    # import remote database
-#    config.vm.provision :shell do |shell|
-#        shell.inline = "mysqldump -hhostname -uusername -ppassword databasename > dump.sql && mysql -uroot -ppassword example_db_name < dump.sql"
-#    end
-    # run Laravel migration
-#    config.vm.provision :shell do |shell|
-#        shell.inline = "php /vagrant/artisan migrate --env=local"
-#    end
     # permissions for the application's storage folder
 #    config.vm.provision :shell do |shell|
 #        shell.inline = "chmod 777 -R /vagrant/app/storage"
