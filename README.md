@@ -6,15 +6,9 @@ This repo is very much a work in progress. There are many things that can be imp
 
 ### Features Include
 
-- [XDebug](http://xdebug.org/) - PHP Debugging extension
-- [WebGrind](https://github.com/jokkedk/webgrind) - Profiling tool
-- [MailCatcher](http://mailcatcher.me/) - Easy local mail testing
 - Git
-- Subversion
 - LAMP (including PHP 5.4)
 - Sqlite
-- Composer
-- Curl, TMUX, screen
 
 # Installation
 
@@ -42,6 +36,14 @@ This should work on any Windows, OSX, or Linux box.
     $ cd mysiterepo
 
     $ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
+
+
+- Update the submodules within the submodule (inception)
+
+
+    $ cd vagrant-chef
+    $ git submodule init
+    $ git submodule update
 
 
 - Copy an example Vagrantfile
@@ -92,14 +94,6 @@ If configurations change you can simply run:
 
 It will then apply your changes to the Vagrantfile or cookbooks.
 
-### Running Unit-Tests
-
-
-    $ vagrant ssh
-
-    $ cd /vagrant
-
-    $ phpunit
 
 ### Troubleshooting
 
@@ -112,7 +106,3 @@ I've made many annotations of issues in the Vagrantfile example, each could use 
 Trying to install this on your system and reporting back any issues that you've had with instructions listed would be a huge help.
 
 Know a bit about Vagrant / Chef and want to complain that something could be done better? Please open an issue!
-
-# Sources
-
-Much configuration was taken directly from https://github.com/r8/vagrant-lamp.

@@ -20,6 +20,7 @@ Vagrant::Config.run do |config|
 
         # these settings assume that you have vagrant-chef as
         # a submodule in your app in the vagrant-chef folder
+
         chef.cookbooks_path = "vagrant-chef/chef/cookbooks"
         chef.data_bags_path = "vagrant-chef/chef/data_bags"
 
