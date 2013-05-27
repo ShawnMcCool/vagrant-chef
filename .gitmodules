@@ -43,3 +43,6 @@
 [submodule "chef/cookbooks/composer"]
 	path = chef/cookbooks/composer
 	url = git@github.com:zircote/chef-composer.git
+[submodule "chef/cookbooks/phpunit"]
+	path = chef/cookbooks/phpunit
+	url = git@github.com:escapestudios/chef-phpunit.git

@@ -40,6 +40,8 @@ Vagrant::Config.run do |config|
         chef.add_recipe "database::mysql"
         chef.add_recipe "apache-sites"
         chef.add_recipe "mysql-databases"
+        chef.add_recipe "composer"
+        chef.add_recipe "phpunit"
 
         chef.json.merge!({
             "mysql" => {
@@ -66,9 +68,5 @@ Vagrant::Config.run do |config|
     # permissions for the application's storage folder
 #    config.vm.provision :shell do |shell|
 #        shell.inline = "chmod 777 -R /vagrant/app/storage"
-#    end
-    # install phpunit (this should be a cookbook)
-#    config.vm.provision :shell do |shell|
-#        shell.inline = "sudo apt-get -y install phpunit"
 #    end
 end
