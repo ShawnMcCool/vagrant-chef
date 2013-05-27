@@ -52,3 +52,6 @@
 [submodule "chef/cookbooks/ark"]
 	path = chef/cookbooks/ark
 	url = git@github.com:opscode-cookbooks/ark.git
+[submodule "chef/cookbooks/curl"]
+	path = chef/cookbooks/curl
+	url = git@github.com:phlipper/chef-curl.git
