@@ -1,3 +1,7 @@
+mysql_connection_info = {:host => "localhost",
+                         :username => 'root',
+                         :password => node['mysql']['server_root_password']}
+
 # Set up client site database
 if defined? node['databases'] then
     if defined? node['databases']['create'] then
