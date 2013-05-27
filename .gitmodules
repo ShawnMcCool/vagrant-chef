@@ -46,3 +46,6 @@
 [submodule "chef/cookbooks/phpunit"]
 	path = chef/cookbooks/phpunit
 	url = git@github.com:escapestudios/chef-phpunit.git
+[submodule "chef/cookbooks/elasticsearch"]
+	path = chef/cookbooks/elasticsearch
+	url = git@github.com:elasticsearch/cookbook-elasticsearch.git
