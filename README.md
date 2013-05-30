@@ -6,10 +6,13 @@ This repo is very much a work in progress. There are many things that can be imp
 
 ### Features Include
 
+- LAMP (PHP 5.4)
 - Git
-- LAMP (including PHP 5.4)
-- Sqlite
-
+- Composer
+- PHPUnit
+- automatic MySQL database creation
+- automatic apache vhost creation
+- other cookbooks and ready for love (ElasticSearch)
 # Installation
 
 These instructions are merely one way to use these tools. I'm presenting them because I feel that they're both reasonable and simple.
@@ -20,7 +23,9 @@ You would install this individually into each site repo. When working on a site,
 
 This should work on any Windows, OSX, or Linux box.
 
-### Installation is two-part. First, install the applications. (DO NOT INSTALL FROM PACKAGE MANAGER)
+### Installation is two-part. First, install the applications.
+
+**(DO NOT INSTALL FROM PACKAGE MANAGER)** If you do install virtualbox, vagrant or chef from package managers then expect pain.
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
