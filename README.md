@@ -28,27 +28,21 @@ This should work on any Windows, OSX, or Linux box.
 
 - [Install Chef Client](http://www.opscode.com/chef/install/)
 
-### Then, set up your site repository.
+### Set up Your Project
 
 - Add this repository to yours.
 
-
-	$ cd mysiterepo
+	$ cd mysite
 
 	$ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
 
-
 - Update the submodules within the submodule. (inception)
-
 
 	$ git submodule update --init --recursive
 
-
 - Copy an example Vagrantfile to your project's root.
 
-
 	$ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
-
 
 - Read the Vagrant file and modify where appropriate for your project.
 
@@ -62,9 +56,7 @@ This should work on any Windows, OSX, or Linux box.
 
 ### Start the Application
 
-
 	$ vagrant up
-
 
 Wait until Vagrant / Chef are done, then in your browser http://app.local/ or http://10.10.10.10
 
@@ -72,23 +64,17 @@ Wait until Vagrant / Chef are done, then in your browser http://app.local/ or ht
 
 You have the choice of either... Supending the application (takes a small bit more disk space). **Recommended**
 
-
 	$ vagrant suspend
-
 
 or.. you can halt the box (saves like 200meg?) but requires you to start it all up again. (You don't have to rebuild the VM)
 
-
 	$ vagrant halt
-
 
 ### Make Changes to the Environment
 
 If configurations change you can simply run:
 
-
 	$ vagrant reload
-
 
 It will then apply your changes to the Vagrantfile or cookbooks.
 
