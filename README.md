@@ -38,23 +38,19 @@ This should work on any Windows, OSX, or Linux box.
 	$ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
 
 
-- Update the submodules within the submodule (inception)
+- Update the submodules within the submodule. (inception)
 
 
-	$ cd vagrant-chef
-
-	$ git submodule init
-
-	$ git submodule update
+	$ git submodule update --init --recursive
 
 
-- Copy an example Vagrantfile
+- Copy an example Vagrantfile to your project's root.
 
 
 	$ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
 
 
-- Read the Vagrant file and uncomment / modify where appropriate
+- Read the Vagrant file and modify where appropriate for your project.
 
 - Add this entry to hosts file
 
@@ -96,6 +92,18 @@ If configurations change you can simply run:
 
 It will then apply your changes to the Vagrantfile or cookbooks.
 
+### Optional Aliases
+
+I add these aliases to my shell script's initialization file for ease. You might like them, too.
+
+    alias vl="VBoxManage list runningvms"
+    alias vu="vagrant up"
+    alias vd="vagrant suspend"
+    alias vr="vagrant reload"
+    alias vs="vagrant ssh"
+    alias ga="git add ."
+    alias gc="git commit -a"
+    alias gp="git push"
 
 ### Troubleshooting
 
