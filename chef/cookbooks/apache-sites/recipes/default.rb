@@ -1,7 +1,7 @@
 # Install packages
-%w{ debconf vim screen mc subversion curl tmux make g++ libsqlite3-dev }.each do |a_package|
-  package a_package
-end
+# %w{ debconf vim screen mc subversion curl tmux make g++ libsqlite3-dev }.each do |a_package|
+#   package a_package
+# end
 
 # Generate selfsigned ssl
 execute "make-ssl-cert" do
