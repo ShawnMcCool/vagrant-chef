@@ -23,7 +23,7 @@ You would install this individually into each site repo. When working on a site,
 
 This should work on any Windows, OSX, or Linux box.
 
-### Installation is two-part. First, install the applications.
+### First, install the applications.
 
 **(DO NOT INSTALL FROM PACKAGE MANAGER)** If you do install virtualbox, vagrant or chef from package managers then expect pain.
 
@@ -33,49 +33,47 @@ This should work on any Windows, OSX, or Linux box.
 
 - [Install Chef Client](http://www.opscode.com/chef/install/)
 
-### Set up Your Project
+### Now, set up your project.
 
-- Add this repository to yours.
+1. Add this repository to yours.
 
-	$ cd mysite
+    $ cd mysite
 
-	$ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
+    $ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
 
-- Update the submodules within the submodule. (inception)
+2. Update the submodules within the submodule. (inception)
 
-	$ git submodule update --init --recursive
+    $ git submodule update --init --recursive
 
-- Copy an example Vagrantfile to your project's root.
+3. Copy an example Vagrantfile to your project's root.
 
-	$ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
+    $ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
 
-- Read the Vagrant file and modify where appropriate for your project.
+4. Read the Vagrant file and modify where appropriate for your project.
 
-- Add this entry to hosts file
-
+5. Add this entry to hosts file
 
 	10.10.10.10 app.local
 
-
-# Working on the Application
+# Workflow
 
 ### Start the Application
 
 	$ vagrant up
 
-Wait until Vagrant / Chef are done, then in your browser http://app.local/ or http://10.10.10.10
+Wait until Vagrant / Chef are done. Then, in your browser hit http://app.local.
 
 ### Stop the Application
 
-You have the choice of either... Supending the application (takes a small bit more disk space). **Recommended**
+You have the choice of either... supending the application (takes a small bit more disk space). **Recommended**
 
 	$ vagrant suspend
 
-or.. you can halt the box (saves like 200meg?) but requires you to start it all up again. (You don't have to rebuild the VM)
+or.. you can halt the box. (saves like 200meg?) But, because next time you start it up again it'll take a long time.
 
 	$ vagrant halt
 
-### Make Changes to the Environment
+### When making changes to the environment...
 
 If configurations change you can simply run:
 
@@ -83,8 +81,9 @@ If configurations change you can simply run:
 
 It will then apply your changes to the Vagrantfile or cookbooks.
 
-### Optional Aliases
+### Easing the pain
 
+Ok, it's not really that painful in exchange for what you get from it. Definitely
 I add these aliases to my shell script's initialization file for ease. You might like them, too.
 
     alias vl="VBoxManage list runningvms"
