@@ -83,8 +83,7 @@ It will then apply your changes to the Vagrantfile or cookbooks.
 
 ### Easing the pain
 
-Ok, it's not really that painful in exchange for what you get from it. Definitely
-I add these aliases to my shell script's initialization file for ease. You might like them, too.
+Ok, it's not really that painful in exchange for what you get from it. I add these aliases to my shell script's initialization file for ease. You might like them, too.
 
     alias vl="VBoxManage list runningvms"
     alias vu="vagrant up"
