@@ -17,12 +17,14 @@ if defined? node['databases'] then
 
                 # setup users
                 if defined? node['databases']['grant'] then
-                    node['databases']['grant'].each do |user|
-                      mysql_database_user user["user"] do
-                        connection mysql_connection_info
-                        password user["password"]
-                        host user["host"]
-                        action :grant
+                    if node['databases']['grant'].kind_of?(Array) then
+                      node['databases']['grant'].each do |user|
+                        mysql_database_user user["user"] do
+                          connection mysql_connection_info
+                          password user["password"]
+                          host user["host"]
+                          action :grant
+                        end
                       end
                     end
                 end
