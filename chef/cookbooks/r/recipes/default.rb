@@ -17,11 +17,11 @@ when "ubuntu"
 		notifies :run, resources(:execute => "apt-get update"), :immediately
 	end
 
-	apt_repository "CRAN" do
-		uri "http://#{node[:R][:CRAN][:default]}/bin/linux/ubuntu"
-		distribution "#{node[:lsb][:codename]}/"
-		action :add
-	end
+	# apt_repository "CRAN" do
+	# 	uri "http://#{node[:R][:CRAN][:default]}/bin/linux/ubuntu"
+	# 	distribution "#{node[:lsb][:codename]}/"
+	# 	action :add
+	# end
 
 	%w{ r-base r-base-dev }.each do |p|
 		package p do
@@ -48,8 +48,8 @@ when "debian"
 	execute "install R" do
 		command "apt-get -t #{node[:lsb][:codename]}-cran install --yes --force-yes r-base r-base-dev"
 	end
-	
-when "centos","redhat","fedora"	
+
+when "centos","redhat","fedora"
 	remote_file "/tmp/R-latest.tar.gz" do
 		source "http://#{node[:R][:CRAN][:default]}/src/base/R-latest.tar.gz"
 		backup false
@@ -67,7 +67,7 @@ when "centos","redhat","fedora"
 	bash "install_R_from_source" do
 		user "root"
 		code <<-EOH
-		set -e	
+		set -e
 		yum -y groupinstall 'X Window System'
 		yum -y groupinstall 'X Software Development'
 		cd /tmp
@@ -102,7 +102,7 @@ bash "Set_R_site_profile" do
 end
 
 node[:R][:packages].each do |p|
-		
+
 	include_recipe "r::#{p}" rescue ArgumentError
 
 	r_package p do
