@@ -49,6 +49,10 @@ when "debian"
 		command "apt-get -t #{node[:lsb][:codename]}-cran install --yes --force-yes r-base r-base-dev"
 	end
 
+	execute "install GMT package" do
+		command "sudo /usr/bin/R -e \"install.packages('gmt')\""
+	end
+
 when "centos","redhat","fedora"
 	remote_file "/tmp/R-latest.tar.gz" do
 		source "http://#{node[:R][:CRAN][:default]}/src/base/R-latest.tar.gz"
