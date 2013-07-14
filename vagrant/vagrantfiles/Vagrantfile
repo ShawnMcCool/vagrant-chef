@@ -1,5 +1,5 @@
-base_box = ENV['VAGRANT_BOX'] || 'quantal64'
-base_box_url = ENV['VAGRANT_BOX_URL'] || 'http://static.aldoborrero.com/vagrant/quantal64.box'
+base_box = ENV['VAGRANT_BOX'] || 'bn-quantal64-lamp'
+base_box_url = ENV['VAGRANT_BOX_URL'] || 'http://big-name.s3.amazonaws.com/bn-quantal64-lamp.box'
 
 home_path = ENV['HOME']
 
