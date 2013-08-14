@@ -58,3 +58,6 @@
 [submodule "chef/cookbooks/supervisor"]
 	path = chef/cookbooks/supervisor
 	url = git@github.com:opscode-cookbooks/supervisor.git
+[submodule "chef/cookbooks/python"]
+	path = chef/cookbooks/python
+	url = git@github.com:opscode-cookbooks/python.git
