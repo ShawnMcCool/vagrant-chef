@@ -55,3 +55,6 @@
 [submodule "chef/cookbooks/curl"]
 	path = chef/cookbooks/curl
 	url = git@github.com:phlipper/chef-curl.git
+[submodule "chef/cookbooks/supervisor"]
+	path = chef/cookbooks/supervisor
+	url = git@github.com:opscode-cookbooks/supervisor.git
