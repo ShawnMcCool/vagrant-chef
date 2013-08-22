@@ -61,3 +61,6 @@
 [submodule "chef/cookbooks/python"]
 	path = chef/cookbooks/python
 	url = git@github.com:opscode-cookbooks/python.git
+[submodule "cookbooks/chef/nodejs"]
+	path = cookbooks/chef/nodejs
+	url = git@github.com:mdxp/nodejs-cookbook.git
