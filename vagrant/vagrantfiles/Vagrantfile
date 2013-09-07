@@ -14,7 +14,7 @@ Vagrant::Config.run do |config|
     # /vagrant is the folder in which the current path is mounted
     # permissions are set so that non-Windows machines won't have
     # to mess with permissions
-    config.vm.share_folder("vagrant-root", "/vagrant", ".", :extra => 'dmode=777,fmode=777')
+    config.vm.share_folder("vagrant-root", "/vagrant", ".", :mount_options => ["dmode=777","fmode=777"])
 
     config.vm.provision :chef_solo do |chef|
 
