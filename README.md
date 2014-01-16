@@ -39,22 +39,22 @@ This should work on any Windows, OSX, or Linux box.
 1. Add this repository to yours.
 
 ```
-$ cd mysite
+cd mysite
 
-$ git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
+git submodule add git@github.com:ShawnMcCool/vagrant-chef.git
 ```
 
 
 2. Update the submodules within the submodule. (inception)
 
 ```
-$ git submodule update --init --recursive
+git submodule update --init --recursive
 ```
 
 3. Copy an example Vagrantfile to your project's root.
 
 ```
-$ cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
+cp vagrant-chef/vagrant/vagrantfiles/Vagrantfile .
 ```
 
 4. Read the Vagrant file and modify where appropriate for your project.
