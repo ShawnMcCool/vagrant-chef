@@ -1,5 +1,5 @@
-Vagrant / Chef Configurations
-============
+# Vagrant / Chef Configurations v1.1
+
 Everything that one needs to create development environments with Vagrant and Chef.
 
 This repo is very much a work in progress. There are many things that can be improved. Annotations were made in comment form within the example Vagrantfile, regarding room for improvement. Issues and pull-requests are encouraged.
