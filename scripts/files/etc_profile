@@ -1,1 +1,4 @@
 umask 027
+alias t="vendor/bin/codecept run"
+alias compass="sudo compass"
+alias ltr="ls -ltr"
