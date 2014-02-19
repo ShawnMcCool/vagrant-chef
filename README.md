@@ -30,7 +30,7 @@ This should work on any Windows, OSX, or Linux box.
 
 - [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-- [install Vagrant](http://downloads.vagrantup.com/)
+- [install Vagrant](http://www.vagrantup.com/downloads.html)
 
 - [Install Chef Client](http://www.opscode.com/chef/install/)
 
