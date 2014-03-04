@@ -64,3 +64,6 @@
 [submodule "chef/cookbooks/nodejs"]
 	path = chef/cookbooks/nodejs
 	url = git@github.com:mdxp/nodejs-cookbook.git
+[submodule "chef/cookbooks/memcached"]
+	path = chef/cookbooks/memcached
+	url = git@github.com:opscode-cookbooks/memcached.git
