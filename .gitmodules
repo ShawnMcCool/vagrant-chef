@@ -76,3 +76,6 @@
 [submodule "chef/cookbooks/runit"]
 	path = chef/cookbooks/runit
 	url = git@github.com:hw-cookbooks/runit.git
+[submodule "chef/cookbooks/windows"]
+	path = chef/cookbooks/windows
+	url = git@github.com:opscode-cookbooks/windows.git
