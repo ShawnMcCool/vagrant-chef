@@ -67,3 +67,6 @@
 [submodule "chef/cookbooks/memcached"]
 	path = chef/cookbooks/memcached
 	url = git@github.com:opscode-cookbooks/memcached.git
+[submodule "chef/cookbooks/postgresql"]
+	path = chef/cookbooks/postgresql
+	url = git@github.com:damm/postgresql.git
