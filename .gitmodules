@@ -91,3 +91,6 @@
 [submodule "chef/cookbooks/sysctl"]
 	path = chef/cookbooks/sysctl
 	url = git@github.com:onehealth-cookbooks/sysctl.git
+[submodule "chef/cookbooks/ohai"]
+	path = chef/cookbooks/ohai
+	url = git@github.com:opscode-cookbooks/ohai.git
