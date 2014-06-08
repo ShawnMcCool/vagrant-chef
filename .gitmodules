@@ -82,3 +82,6 @@
 [submodule "chef/cookbooks/xfs"]
 	path = chef/cookbooks/xfs
 	url = git@github.com:opscode-cookbooks/xfs.git
+[submodule "chef/cookbooks/xml"]
+	path = chef/cookbooks/xml
+	url = git@github.com:opscode-cookbooks/xml.git
