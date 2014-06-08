@@ -88,3 +88,6 @@
 [submodule "chef/cookbooks/yum-epel"]
 	path = chef/cookbooks/yum-epel
 	url = git@github.com:opscode-cookbooks/yum-epel.git
+[submodule "chef/cookbooks/sysctl"]
+	path = chef/cookbooks/sysctl
+	url = git@github.com:onehealth-cookbooks/sysctl.git
