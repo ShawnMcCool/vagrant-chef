@@ -67,3 +67,30 @@
 [submodule "chef/cookbooks/memcached"]
 	path = chef/cookbooks/memcached
 	url = git@github.com:opscode-cookbooks/memcached.git
+[submodule "chef/cookbooks/postgresql"]
+	path = chef/cookbooks/postgresql
+	url = git@github.com:damm/postgresql.git
+[submodule "chef/cookbooks/chef_handler"]
+	path = chef/cookbooks/chef_handler
+	url = git@github.com:opscode-cookbooks/chef_handler.git
+[submodule "chef/cookbooks/runit"]
+	path = chef/cookbooks/runit
+	url = git@github.com:hw-cookbooks/runit.git
+[submodule "chef/cookbooks/windows"]
+	path = chef/cookbooks/windows
+	url = git@github.com:opscode-cookbooks/windows.git
+[submodule "chef/cookbooks/xfs"]
+	path = chef/cookbooks/xfs
+	url = git@github.com:opscode-cookbooks/xfs.git
+[submodule "chef/cookbooks/xml"]
+	path = chef/cookbooks/xml
+	url = git@github.com:opscode-cookbooks/xml.git
+[submodule "chef/cookbooks/yum-epel"]
+	path = chef/cookbooks/yum-epel
+	url = git@github.com:opscode-cookbooks/yum-epel.git
+[submodule "chef/cookbooks/sysctl"]
+	path = chef/cookbooks/sysctl
+	url = git@github.com:onehealth-cookbooks/sysctl.git
+[submodule "chef/cookbooks/ohai"]
+	path = chef/cookbooks/ohai
+	url = git@github.com:opscode-cookbooks/ohai.git
