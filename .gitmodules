@@ -79,3 +79,6 @@
 [submodule "chef/cookbooks/windows"]
 	path = chef/cookbooks/windows
 	url = git@github.com:opscode-cookbooks/windows.git
+[submodule "chef/cookbooks/xfs"]
+	path = chef/cookbooks/xfs
+	url = git@github.com:opscode-cookbooks/xfs.git
