@@ -73,3 +73,6 @@
 [submodule "chef/cookbooks/chef_handler"]
 	path = chef/cookbooks/chef_handler
 	url = git@github.com:opscode-cookbooks/chef_handler.git
+[submodule "chef/cookbooks/runit"]
+	path = chef/cookbooks/runit
+	url = git@github.com:hw-cookbooks/runit.git
